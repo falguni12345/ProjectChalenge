@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1"><br><br>
+    <input type="text" id="num2"><br><br>
+
+    <select id="operators">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <button onclick="calc()">Submit</button>
+    <input type="text" id="result">
+    
+
+    <script>
+        function calc() {
+            var num1 = parseFloat (document.getElementById("num1").value);
+            var num2 = parseFloat (document.getElementById("num2").value);
+            var oper = document.getElementById("operators").value;
+           
+            if (oper === '+') {
+                document.getElementById("result").value = num1 + num2;
+            }
+
+            if (oper === '-') {
+                document.getElementById("result").value = num1 - num2;
+            }
+
+            if (oper === '*') {
+                document.getElementById("result").value = num1 * num2;
+            }
+
+            if (oper === '/') {
+                document.getElementById("result").value = num1 / num2;
+            }
+        }
+    </script>
+</body>
+</html>
